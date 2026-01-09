@@ -241,7 +241,6 @@ export const ClientForm: React.FC<ClientFormProps> = ({
       if (!emailRegex.test(value)) {
         return 'Email inválido';
       }
-      // Verificar se o email já foi cadastrado
       const emailExists = clients.some(
         client => client.email.toLowerCase() === value.toLowerCase() && client.id !== initialData?.id
       );

@@ -89,10 +89,8 @@ function AppContent() {
       } else {
         await addClient(client);
       }
-      // Só fecha o modal se não houver erro
       handleCloseModal();
     } catch (err) {
-      // Erro é capturado, modal permanece aberto
       console.error(err);
     } finally {
       setIsSubmitting(false);
